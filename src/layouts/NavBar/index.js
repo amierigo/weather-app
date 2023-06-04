@@ -16,10 +16,10 @@ const NavBar = () => {
         background: "#68C4C1",
         display: "flex",
         justifyContent: "center",
-        padding: "0px 2rem",
+        padding: "0px 1rem",
       }}
     >
-      <Toolbar>
+      <Toolbar style={{ display: 'flex', justifyContent: 'space-between' }}>
         <Box mr={1}>
           <img alt="Weather App" src={CloudIcon} height={65} width={75} />
         </Box>
@@ -31,7 +31,7 @@ const NavBar = () => {
           Weather Forecast
         </Typography>
         {isAuthenticated && (
-          <Box sx={{ display: { xs: "none", sm: "block" } }}>
+          <Box>
             <Button
               btnMode={BUTTON_MODE.CONTAINED}
               onClick={() => {

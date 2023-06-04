@@ -9,7 +9,7 @@ const MainLayout = ({ children }) => {
     <Box>
       <CssBaseline />
       <NavBar />
-      <Box component='main' sx={{ p: 3 }}>
+      <Box component='main' sx={{ p: 2 }}>
         <Toolbar />
         <Container fixed>{children}</Container>
       </Box>

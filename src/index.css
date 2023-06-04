@@ -24,3 +24,13 @@ code {
   padding-top: 13px;
   padding-left: 20px;
 }
+
+.search-error {
+  color: #ef5350;
+}
+
+@media only screen and (max-width: 600px) {
+  .search-input {
+    width: 90%;
+  }
+}
