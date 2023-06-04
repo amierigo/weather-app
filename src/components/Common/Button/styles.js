@@ -12,7 +12,7 @@ const CustomButton = styled(Button)(({ theme }) => ({
   letterSpacing: '1.2px',
 
   '&:hover': {
-    backgroundColor: purple[700],
+    backgroundColor: '#F2685F',
   },
 }));
 

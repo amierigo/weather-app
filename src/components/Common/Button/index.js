@@ -1,17 +1,17 @@
 import { PropTypes } from 'prop-types';
 import CustomButton from './styles';
 
-const AppButton = ({ btnMode, disabled, text }) => {
+const Button = ({ btnMode, disabled, text, ...rest }) => {
   return (
-    <CustomButton disabled={disabled} variant={btnMode}>
+    <CustomButton disabled={disabled} variant={btnMode} {...rest}>
       {text}
     </CustomButton>
   );
 };
 
-AppButton.propTypes = {
+Button.propTypes = {
   btnMode: PropTypes.string.isRequired,
   disabled: PropTypes.bool,
   text: PropTypes.string.isRequired,
 };
-export default AppButton;
+export default Button;

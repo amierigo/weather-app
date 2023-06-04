@@ -1,6 +1,6 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import { Box, CssBaseline, Toolbar } from '@mui/material';
+import { Box, Container, CssBaseline, Toolbar } from '@mui/material';
 
 import NavBar from '../NavBar';
 
@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
       <NavBar />
       <Box component='main' sx={{ p: 3 }}>
         <Toolbar />
-        <main>{children}</main>
+        <Container fixed>{children}</Container>
       </Box>
     </Box>
   );
