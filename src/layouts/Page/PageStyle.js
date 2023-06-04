@@ -1,14 +1,21 @@
 import styled from '@emotion/styled'
 
 const PageStyle = styled('div')`
-  & > div > .welcome-landing {
+  & > div > .welcome {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: calc(70vh - 120px);
-    margin: 0 3rem;
-  }
+  },
+  & > div > .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: calc(70vh - 120px);
+    width: 100%;
+  },
 `
 
 export default PageStyle;

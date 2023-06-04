@@ -1,8 +1,10 @@
 import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Toolbar, Typography } from "@mui/material";
 
-import cloud from "../../assets/images/cloud.png";
+import Button from "../../components/Common/Button";
+import CloudIcon from "../../assets/images/cloud.png";
+import { BUTTON_MODE } from "../../constants/styles";
 
 const NavBar = () => {
   const { isAuthenticated, logout } = useAuth0();
@@ -19,7 +21,7 @@ const NavBar = () => {
     >
       <Toolbar>
         <Box mr={1}>
-          <img alt="Weather App" src={cloud} height={65} width={75} />
+          <img alt="Weather App" src={CloudIcon} height={65} width={75} />
         </Box>
         <Typography
           variant="h6"
@@ -31,6 +33,7 @@ const NavBar = () => {
         {isAuthenticated && (
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <Button
+              btnMode={BUTTON_MODE.CONTAINED}
               onClick={() => {
                 logout({
                   logoutParams: {
@@ -38,7 +41,7 @@ const NavBar = () => {
                   },
                 });
               }}
-              sx={{ color: "#fff" }}
+              text='Logout'
             >
               Logout
             </Button>

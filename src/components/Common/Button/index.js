@@ -1,4 +1,5 @@
 import { PropTypes } from 'prop-types';
+
 import CustomButton from './styles';
 
 const Button = ({ btnMode, disabled, text, ...rest }) => {
