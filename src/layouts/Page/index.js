@@ -1,19 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Button } from "@mui/material";
+import { Box } from "@mui/material";
 
-import { DIRECTION } from "../../constants/direction";
 import PageStyle from "./PageStyle";
 
-const Page = ({ btnAction, children }) => {
+const Page = ({ children }) => {
   return (
     <PageStyle>
       <Box>{children}</Box>
-      {btnAction === DIRECTION.BACK && (
-        <Box>
-          <Button />
-        </Box>
-      )}
     </PageStyle>
   );
 };
