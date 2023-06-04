@@ -10,6 +10,7 @@ const CustomButton = styled(Button)(({ theme }) => ({
   padding: theme.spacing(1, 3),
   fontSize: '1rem',
   letterSpacing: '1.2px',
+  boxShadow: '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
 
   '&:hover': {
     backgroundColor: '#F2685F',
