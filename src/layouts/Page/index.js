@@ -1,27 +1,25 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Box, Button } from '@mui/material';
+import React from "react";
+import PropTypes from "prop-types";
+import { Box, Button } from "@mui/material";
 
-import { DIRECTION } from '../../constants/direction';
+import { DIRECTION } from "../../constants/direction";
+import PageStyle from './PageStyle';
 
-const Page = ({
-  btnAction,
-  children,
-}) => {
+const Page = ({ btnAction, children }) => {
   return (
-    <Box>
+    <PageStyle>
       <Box>{children}</Box>
-      <Box>
-        {btnAction === DIRECTION.BACK && (
+      {btnAction === DIRECTION.BACK && (
+        <Box>
           <Button />
-        )}
-      </Box>
-    </Box>
-  )
-}
+        </Box>
+      )}
+    </PageStyle>
+  );
+};
 
 Page.propTypes = {
-	btnAction: PropTypes.string,
+  btnAction: PropTypes.string,
   children: PropTypes.node.isRequired,
 };
 export default Page;

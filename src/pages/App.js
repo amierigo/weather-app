@@ -4,9 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import { ROUTES } from '../constants/menu';
 
-
 function App() {
-
   return (
     <div className="App">
       <Router>
