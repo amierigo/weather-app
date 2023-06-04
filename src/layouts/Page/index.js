@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Box, Button } from "@mui/material";
+import { Box, Button, Container } from "@mui/material";
 
 import { DIRECTION } from "../../constants/direction";
-import PageStyle from './PageStyle';
+import PageStyle from "./PageStyle";
 
 const Page = ({ btnAction, children }) => {
   return (

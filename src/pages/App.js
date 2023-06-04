@@ -2,12 +2,13 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import MainLayout from "../layouts/MainLayout";
-import { ROUTES } from '../constants/menu';
+import history from "../utils/history";
+import { ROUTES } from "../constants/menu";
 
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router history={history}>
         <MainLayout>
           <Routes>
             {ROUTES.map(({ component: Component, exact, id, path }) => (
@@ -15,7 +16,7 @@ function App() {
                 key={`${id}-route`}
                 exact={exact}
                 path={path}
-                element={<Component/>}
+                element={<Component />}
               />
             ))}
           </Routes>
